@@ -18,6 +18,7 @@ const Keyboard = () => {
         onDelete,
     } = useContext(AppContext);
 
+    /*
     const handleKeyboard = useCallback((event: any): void => {
         console.log(event.key)
         if (event.key === 'Enter') {
@@ -50,10 +51,10 @@ const Keyboard = () => {
             document.removeEventListener('keydown', handleKeyboard)
         }
     }, [handleKeyboard])
-
+    */
 
     return (
-        <div className='keyboard' onKeyDown={handleKeyboard}>
+        <div className='keyboard'>
             <div className='line1'>
                 {keys1.map((key) => {
                     return <Key keyVal={key} disabled={disabledLetters.includes(key)}/>
